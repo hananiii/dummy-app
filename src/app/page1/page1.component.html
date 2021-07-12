@@ -1,0 +1,14 @@
+<h1>Page 1: Display all the posts</h1>
+<h3>View all posts endpoint: <a href="https://jsonplaceholder.typicode.com/posts">https://jsonplaceholder.typicode.com/posts</a></h3>
+<div *ngFor="let post of postData" >
+  
+  <div>
+    <h4>{{post.id}}. Title: {{post.title}}</h4>
+    <p>User ID: {{post.userId}}</p>
+    <p>Body: {{post.body}}</p>
+    <p>
+      <button type="button" class="btn btn-primary-outline pull-right" routerLink="/page2/{{ post.id }}"><i class="fa fa-plus"></i>
+        View Individual Post</button>
+    </p>
+  </div>
+</div>
